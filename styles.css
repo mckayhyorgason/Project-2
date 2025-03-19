@@ -1,0 +1,832 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "Bebas Neue"; */
+    font-family: "Exo 2";
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid pink; */
+    background-color: #fbf9f197;
+    color: #2E2F38;
+}
+
+/* ****************** Header ******************** */
+/* ********************************************** */
+.top-head {
+    background-color: #014c7a;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #011c2d;
+    border-top: 2px solid #011c2d;
+    /* gap: 30%; */
+}
+
+.top-head-quote {
+    color: whitesmoke;
+    text-decoration: underline;
+    animation: header-slide 21s linear infinite;
+    /* opacity: 0; */
+    position: relative;
+}
+
+.first {
+    animation-delay: 14s;
+    position: absolute;
+    left: -125px;
+}
+
+.second {
+    animation-delay: 7s;
+    position: absolute;
+    left: -125px;
+}
+
+.third {
+    animation-delay: 0s;
+    position: absolute;
+    left: -125px;
+}
+
+/**************** Animation for top header ***************/
+@keyframes header-slide {
+    0% {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(110vw);
+        opacity: 1;
+    }
+}
+
+.header-bar {
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(126, 126, 126);
+    /* position: fixed; */
+    /* z-index: 2; */
+}
+
+.logo {
+    margin-left: 20px;
+    border: 3px solid rgb(204, 204, 204);
+}
+
+.link-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid black; */
+}
+
+.nav-link {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* gap: 130px; */
+}
+
+.header-link {
+    color: #2e2f38;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    /* display: inline-block; */
+    display: flex;
+    font-family: "Exo 2";
+}
+
+.header-link:hover {
+    transform: scale(1.07);
+    color: black;
+}
+/* ************************************** */
+
+
+
+/* ****************** Main Pic ****************** */
+/* ********************************************** */
+.main-pic-container {
+    position: relative;
+    display: flex;
+    height: 86vh;
+}
+
+.main-pic {
+    display: flex;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    height: 86vh;
+}
+
+.cover {
+    width: 100%;
+    height: 86vh;
+    background-image: linear-gradient(to right, #6f85b5b1 40%, rgba(245, 245, 245, 0.097));
+    position: absolute;
+    /* border: 3px solid blue; */
+}
+
+.icon {
+    position: absolute;
+    bottom: 20px;
+    left: 49%;
+    font-size: 50px;
+    color: whitesmoke;
+    display: flex;
+    text-shadow: 
+        -2px -2px 0 #2E2F38,  
+        2px -2px 0 #2E2F38,  
+        -2px  2px 0 #2E2F38,  
+        2px  2px 0 #2E2F38;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 30px;
+    /* border: 3px solid green; */
+}
+
+.main-title, .main-title2, .main-title3 {
+    /* border: 3px solid pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "bebas neue";
+    /* color: #6379a8; */
+    color: #2e2f38;
+    font-size: 6rem;
+    width: 100%;
+}
+
+.main-title2 {
+    /* margin-top: 90px; */
+    color: #2e2f38;
+    font-size: 6rem;
+    /* color: white; */
+}
+
+.main-title3 {
+    color: whitesmoke;
+    font-size: 3rem;
+}
+/****************************************/
+
+
+
+/* ****************** Main Body ****************** */
+/* ********************************************** */
+
+/* ****************** Int/Ext ****************** */
+/* ********************************************** */
+.section-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    /* border: 2px solid black; */
+    background-color: #fbf9f197;
+    font-size: 3rem;
+    margin-top: 65px;
+    /* text-decoration: underline; */
+}
+
+.int-ext-container {
+    width: 100%;
+    height: 80vh;
+    background-color: #fbf9f197;
+    display: flex;
+    margin-bottom: 70px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease-out, transform 1.5s ease-out;
+}
+
+/*********** Added this for second animation combined with java script ************/
+.int-ext-container.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.int-ext-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 100%;
+    /* border: 3px solid blue; */
+}
+
+.pic-and-outline-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 550px;
+    /* border: 3px solid blue; */
+    position: relative;
+}
+
+.pic-and-outline-container img {
+    width: auto;
+    height: 400px;
+    display: flex;
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.378);
+    box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
+    position: absolute;
+    top: 70px;
+    left: 38px;
+    /* border-radius: 8px; */
+}
+
+.int-ext-rec {
+    display: flex;
+    align-self: flex-start;
+    height: 400px;
+    width: 710px;
+    border: 4px solid #2E2F38;
+    position: absolute;
+    top: 50px;
+    left: 18px;
+}
+
+.int-ext-description {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    /* border: 3px solid green; */
+}
+
+.int-ext-card {
+    width: 370px;
+    height: 530px;
+    background-color: #f9f9f9;
+    border: 1px solid rgba(158, 158, 158, 0.508);
+    display: flex;
+    /* border-radius: 10px; */
+    flex-direction: column;
+    gap: 30px;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
+}
+
+/* .int-ext-card:hover {
+    transform: scale(1.05);
+    /* color: black; 
+} */
+
+.int-ext-title {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    /* margin-top: 10px; */
+    /* border: 2px solid pink; */
+}
+
+.int-ext-card-description {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    /* height: min-content; */
+    margin-top: 10px;
+    padding: 10px 10px;
+    /* border: 2px solid black; */
+    background-color: #6f85b551;
+    border: 1px solid #6f85b551;
+    border-left: 4px solid #6f85b57d;
+}
+
+.line {
+    display: flex;
+    align-self: center;
+    border: .5px solid #2e2f38b4;
+    width: 90%;
+}
+
+.int-ext-card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: center;
+    width: 90%;
+    padding: 10px;
+    list-style: inside; 
+    background-color: #6f85b551;
+    border: 1px solid #6f85b551;
+    /* I used color picker to find this color */
+    border-left: 4px solid #6f85b57d;
+}
+
+.int-ext-card-booking {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    margin-top: 10px;
+    /* height: auto; */
+    /* border: 2px solid red; */
+}
+
+.int-ext-card-booking > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background: #014c7a;
+    color: whitesmoke;
+    font-size: 1rem;
+    margin-top: 50px;
+    transition: transform 0.3s ease;
+}
+
+.int-ext-card-booking > button:hover {
+    transform: scale(1.05);
+}
+/****************************************/
+
+
+/* *************** Screens/Tracks *************** */
+/* ********************************************** */
+.other-section {
+    background-color: #6f85b57d;
+    height: 100px;
+    margin-bottom: 50px;
+    border: 1px solid #6f85b57d;
+}
+
+.screen-container {
+    width: 80vw;
+    height: 400px;
+    background-color: #fbf9f197;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 30px;
+    font-size: 1.05vw;
+    /* flex-shrink: 2; */
+    /* box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6); */
+    /* border: 2px solid black; */
+}
+
+.other-opt-pic-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    /* position: relative; */
+    /* border: 2px solid red; */
+}
+
+.other-opt-pic-container img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid rgba(158, 158, 158, 0.508);
+    box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
+    /* font-size: 1rem; */
+}
+
+.other-opt-add-text {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 60px 10px;
+    width: 60px;
+    height: 25px;
+    background-color: whitesmoke;
+    z-index: 1;
+    font-size: 1rem;
+    /* top: 50px;
+    left: 10px; */
+}
+
+.other-opt-text {
+    display: flex;
+    position: absolute;
+    color: whitesmoke;
+    align-self: flex-end;
+    margin: 0px 0px 15px 10px;
+    font-size: 1.7rem;
+}
+
+.other-opt-description-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-self: flex-end;
+    background-color: #f9f9f9;
+    border: 1px solid rgba(158, 158, 158, 0.508);
+    /* border-radius: 10px; */
+    flex-direction: column;
+    /* transition: transform 0.3s ease; */
+    box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
+    /* border: 2px solid pink; */
+    transition: transform 0.3s ease;
+}
+
+.other-opt-description-container:hover {
+    transform: scale(1.05);
+}
+
+.other-opt-title {
+    width: 100%;
+    height: 175px;
+    padding: 10px;
+    /* border: 2px solid purple; */
+}
+
+#complete-window-care {
+    padding-left: 15px;
+}
+
+.other-opt-multi-container{
+    display: flex;
+    width: 100%;
+    height: min-content;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+}
+
+.other-opt-description {
+    width: 310px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /* height: min-content; */
+    margin: 20px 0px 0px 0px;
+    padding: 10px 10px;
+    /* border: 2px solid black; */
+    background-color: #6f85b551;
+    border: 1px solid #6f85b551;
+    border-left: 4px solid #6f85b57d;
+}
+
+.other-opt-features {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 280px;
+    list-style: inside;
+    margin: 20px 0px 0px 0px;
+    align-self: center;
+    gap: 10px;
+    /* height: min-content; */
+    padding: 10px;
+    list-style: inside; 
+    background-color: #6f85b551;
+    border: 1px solid #6f85b551;
+    border-left: 4px solid #6f85b57d;
+}
+
+.extra-line {
+    margin-top: 30px;
+}
+
+.other-opt-bottom {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid red; */
+}
+
+.other-opt-price {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    gap: 1px;
+    padding-left: 28px;
+    padding-top: 40px;
+    flex-direction: column;
+    /* border: 2px solid green; */
+}
+
+.other-opt-price p:first-child {
+    font-size: 1rem;
+    display: flex;
+}
+
+.other-opt-price > h1 {
+    font-size: 3.5rem;
+}
+
+.limited-offer {
+    font-size: .6rem;
+    display: flex;
+    padding-top: 49px;
+}
+
+.other-opt-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-self: center; */
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid purple; */
+}
+
+.other-opt-buttons > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    background: #014c7a;
+    color: whitesmoke;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.other-opt-buttons > button:hover {
+    transform: scale(1.05);
+}
+
+.other-opt-buttons button:nth-child(2) {
+    color: #014c7a;
+    background-color: whitesmoke;
+    /* border: 1px solid #014c7a; */
+}
+/****************************************/
+
+
+/* *************** Gutters *************** */
+/* ********************************************** */
+
+
+/****************************************/
+
+.other-section1 {
+    margin-top: 90px;
+    height: 25px;
+}
+
+.meet-team-title {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0px;
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+}
+
+.meet-team-container {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    /* border: 2px solid red; */
+}
+
+.meet-team-description-container {
+    display: flex;
+    height: 100%;
+    width: 48%;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 2px solid green; */
+    gap: 5px;
+    font-size: 1.5rem;
+}
+
+.inner-meet-team-description-container {
+    display: flex;
+    height: 100%;
+    width: 70%;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 1.5rem;
+}
+
+.meet-team-pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+    /* border: 2px solid pink; */
+}
+
+.meet-team-pic-container img {
+    height: 75%;
+    width: 65%;
+    object-fit: cover;
+    object-position: top;
+}
+
+footer {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    background-color: #014c7a;
+}
+
+.logo-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: flex-end;
+    /* border: 2px solid pink; */
+    /* align-items: center; */
+    /* gap: 110px; */
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    margin: 0px 0px 60px 250px;
+    border: 3px solid whitesmoke;
+}
+
+.logo-container > p {
+    margin: 0px 0px 60px 250px;
+    font-size: 1.2rem;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid yellow; */
+    color: whitesmoke;
+    justify-content: space-between;
+    position: relative;
+    padding: 80px 0px 10px 0px;
+}
+
+.media {
+    font-size: 1.5rem;
+    padding: 0px 0px 10px 200px;
+}
+
+.social {
+    display: flex;
+    font-size: 2.3rem;
+    gap: 10px;
+    padding: 0px 0px 70px 200px;
+}
+
+.back-to-top {
+    width: 110px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: #2E2F38;
+    text-decoration: none;
+}
+
+.back {
+    color: #2E2F38;
+    text-decoration: none;
+}
+
+  .form {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .first-input {
+    width: 50%;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-end;
+  }
+  
+  .second-input {
+    width: 50%;
+    display: flex;
+    /* flex-direction: column; */
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inputs {
+    margin: 5px 20px 20px 20px;
+    height: 30px;
+    width: 230px;
+    padding: 5px;
+  }
+
+  #select {
+    margin: 5px 20px 20px 20px;
+    height: 30px;
+    width: 230px;
+    padding: 5px;
+  }
+
+  .message {
+    height: 90px;
+  }
+  
+  label {
+    margin: 0px 20px 0px 20px;
+  }
+
+  .column > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 230px;
+    height: 40px;
+    border-radius: 5px;
+    background: #014c7a;
+    color: whitesmoke;
+    font-size: 1rem;
+    margin-top: 0px;
+    transition: transform 0.3s ease;
+}
+
+.column > button:hover {
+    transform: scale(1.05);
+}
+
+  .window-container {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    border: 2px solid black;
+    background-color: rgb(187, 216, 247);
+}
+
+/* Apply animation to the squeegee */
+.squeegee {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveUpDown 2s ease-in-out infinite;
+}
+
+.animation {
+    /* display: flex; */
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Keyframes for up and down movement of squeegee */
+@keyframes moveUpDown {
+    0% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 100px; /* Move up */
+    }
+    100% {
+        bottom: 0; /* Move down */
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        font-size: 5rem;
+    }
+}
