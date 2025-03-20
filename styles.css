@@ -62,7 +62,7 @@ body {
         opacity: 1;
     }
     100% {
-        transform: translateX(110vw);
+        transform: translateX(115vw);
         opacity: 1;
     }
 }
@@ -658,86 +658,13 @@ body {
     object-position: top;
 }
 
-footer {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    background-color: #014c7a;
-}
-
-.logo-container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    color: whitesmoke;
-    justify-content: flex-end;
-    /* border: 2px solid pink; */
-    /* align-items: center; */
-    /* gap: 110px; */
-}
-
-.footer-logo {
-    width: 150px;
-    height: auto;
-    margin: 0px 0px 60px 250px;
-    border: 3px solid whitesmoke;
-}
-
-.logo-container > p {
-    margin: 0px 0px 60px 250px;
-    font-size: 1.2rem;
-}
-
-.social-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100%;
-    /* border: 2px solid yellow; */
-    color: whitesmoke;
-    justify-content: space-between;
-    position: relative;
-    padding: 80px 0px 10px 0px;
-}
-
-.media {
-    font-size: 1.5rem;
-    padding: 0px 0px 10px 200px;
-}
-
-.social {
-    display: flex;
-    font-size: 2.3rem;
-    gap: 10px;
-    padding: 0px 0px 70px 200px;
-}
-
-.back-to-top {
-    width: 110px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-end;
-    justify-self: flex-end;
-    margin-right: 20px;
-    border-radius: 5px;
-    color: #2E2F38;
-    text-decoration: none;
-}
-
-.back {
-    color: #2E2F38;
-    text-decoration: none;
-}
-
   .form {
     width: 100%;
     height: 35vh;
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    /* border: 3px red solid; */
   }
 
   .first-input {
@@ -763,6 +690,7 @@ footer {
     height: 30px;
     width: 230px;
     padding: 5px;
+    border-radius: 5px;
   }
 
   #select {
@@ -770,6 +698,7 @@ footer {
     height: 30px;
     width: 230px;
     padding: 5px;
+    border-radius: 5px;
   }
 
   .message {
@@ -803,8 +732,10 @@ footer {
     width: 100px;
     height: 200px;
     position: relative;
+    display: flex;
     border: 2px solid black;
     background-color: rgb(187, 216, 247);
+    z-index: 1;
 }
 
 /* Apply animation to the squeegee */
@@ -818,7 +749,7 @@ footer {
 
 .animation {
     /* display: flex; */
-    position: absolute;
+    /* position: absolute; */
     right: 10px;
     top: 10px;
 }
@@ -836,42 +767,178 @@ footer {
     }
 }
 
+/*************** Grid Layout ***************/
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr .5fr;
+    grid-template-rows: 2fr repeat(2, .5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+    height: 350px;
+    background-color: #014c7a;
+    border: 3px solid red;
+}
+
+/* .social-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border: 2px solid yellow;
+    color: whitesmoke;
+    justify-content: space-between;
+    position: relative;
+    padding: 80px 0px 10px 0px;
+} */
+
+/* .media {
+    font-size: 1.5rem;
+    padding: 0px 0px 10px 200px;
+} */
+
+/* .social {
+    display: flex;
+    font-size: 2.3rem;
+    gap: 10px;
+    padding: 0px 0px 70px 200px;
+} */
+
+/* .back-to-top {
+    width: 110px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-right: 20px;
+    border-radius: 5px;
+    color: #2E2F38;
+    text-decoration: none;
+}
+
+.back {
+    color: #2E2F38;
+    text-decoration: none;
+    border: 2px solid red;
+} */
+
+    
+.div1 {
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: rgb(114, 114, 34);
+    height: 100%;
+    display: flex;
+    color: whitesmoke;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border: 2px solid pink;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 230px;
+    border: 3px solid whitesmoke;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3; 
+    background-color: purple;
+    color: whitesmoke;
+}
+
+.div3 {
+    grid-area: 1 / 3 / 2 / 4; 
+    background-color: orange;
+}
+
+.div4 {
+    grid-area: 2 / 1 / 3 / 2; 
+    background-color: gray;
+    color: whitesmoke;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.div5 {
+    grid-area: 3 / 3 / 4 / 4; 
+    background-color: salmon;
+}
+
+
 /**************** Tablets ****************/
 @media (max-width: 900px) {
+    .header-link {
+        font-size: 1.2rem;
+    }
+
+    .main-title, .main-title2 {
+        font-size: 5.4rem;
+        flex-wrap: wrap;
+    }
+
+    .main-title3 {
+        font-size: 2.7rem;
+        flex-wrap: wrap;
+    }
+
    .int-ext-container {
-    flex-direction: column;
-    height: min-content;
+        flex-direction: column;
+        height: min-content;
    }
 
    .int-ext-pic {
-    width: 100%;
+        width: 100%;
    }
 
    .int-ext-description {
-    width: 100%;
-    justify-content: center;
+        width: 100%;
+        justify-content: center;
    }
 
    .int-ext-card {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-self: flex-end;
-    background-color: #f9f9f9;
-    border: 1px solid rgba(158, 158, 158, 0.508);
-    /* border-radius: 10px; */
-    flex-direction: column;
-    /* transition: transform 0.3s ease; */
-    box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
-    /* border: 2px solid pink; */
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-self: flex-end;
+        background-color: #f9f9f9;
+        border: 1px solid rgba(158, 158, 158, 0.508);
+        /* border-radius: 10px; */
+        flex-direction: column;
+        /* transition: transform 0.3s ease; */
+        box-shadow: 2px 5px 10px rgba(104, 104, 104, 0.6);
+        /* border: 2px solid pink; */
    }
 
    .int-ext-card-booking > button {
-    margin-bottom: 40px;
+        margin-bottom: 40px;
    }
 
    .screen-container {
-    font-size: 1.3vw;
+        font-size: 1.5vw;
+        width: 90vw;
+   }
+
+   .meet-team-title {
+        margin-top: 40px;
+        font-size: 1.4rem;
+   }
+
+   .inner-meet-team-description-container {
+        font-size: 1.2rem;
+        width: 80%;
+   }
+
+   .meet-team-pic-container img {
+        width: 80%;
+   }
+
+   .other-section1 {
+        margin-top: 50px;
    }
 }
 
