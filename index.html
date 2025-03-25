@@ -37,7 +37,17 @@
                     <a class="header-link" href="#contact">Contact</a>
                     <a class="header-link" href="#get-quote">Get A Quote</a>
                 </nav>
-                <i class="hamburger fa-solid fa-bars"></i>
+                <button class="hamburger" id="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div id="mobile-menu" class="mobile-nav">
+                    <a class="header-link border" href="#">Home</a>
+                    <a class="header-link border" href="#meet-team">Meet the Team</a>
+                    <a class="header-link border" href="#contact">Contact</a>
+                    <a class="header-link border" href="#get-quote">Get A Quote</a>
+                </div>
+
             </div>
         </div>
     </header>
@@ -107,7 +117,7 @@
     <section class="screen-container">
         <div class="other-opt-pic-container">
             <img src="./pictures/cleaning-screens2.jpg" alt="cleaning screens">
-            <div class="other-opt-add-text">
+            <div class="other-opt-add-text gutter-add">
                 <h3>Add+</h3>
             </div>
             <h1 class="other-opt-text">Screens & Tracks</h1>
@@ -193,7 +203,7 @@
      <section class="screen-container">
         <div class="other-opt-pic-container">
             <img src="./pictures/solor-panel.jpg" alt="cleaning solar panels">
-            <div class="other-opt-add-text">
+            <div class="other-opt-add-text gutter-add">
                 <h3>Add+</h3>
             </div>
             <h1 class="other-opt-text">Solar Panels</h1>
@@ -250,16 +260,16 @@
     </div>
     <!-- **************************************** -->
     <section class="other-section other-section1"></section>
-    <div class="meet-team-title">
+    <div class="meet-team-title your-information">
         <h1>Your Information</h1>
     </div>
     <div class="form" id="get-quote">
         <div class="first-input">
             <div class="column">
                 <label>First Name</label>
-                <input type="text" class="inputs">
+                <input type="text" class="inputs" placeholder="First Name">
                 <label>Phone Number</label>
-                <input type="text" class="inputs">
+                <input type="text" class="inputs" placeholder="Phone Number">
                 <label name="None">Package</label>
                 <select name="None" id="select">
                     <option value="">None</option>
@@ -274,19 +284,21 @@
         <div class="second-input">
             <div class="column">
                 <label>Last Name</label>
-                <input type="text" class="inputs">
+                <input type="text" class="inputs" placeholder="Last Name">
                 <label>Email</label>
-                <input type="text" class="inputs">
+                <input type="email" class="inputs" placeholder="Enter Email">
                 <label>Message</label>
-                <textarea type="text" class="inputs message"></textarea>
+                <textarea type="text" class="inputs message" placeholder="Enter Text"></textarea>
             </div>
         </div>
     </div>
 
     
     <footer class="parent" id="contact">
-        <div class="logo-container div1">
-            <img class="logo footer-logo" src="./pictures/YB Windows logo.avif" alt="YB Window Washing Logo">
+        <div class="div1">
+            <div class="footer-logo-container">
+                <img class="logo footer-logo" src="./pictures/YB Windows logo.avif" alt="YB Window Washing Logo">
+            </div>
         </div>
         <div class="social-container div2">
             <div>
@@ -308,7 +320,9 @@
             </div>
         </div>
         <p class="div4">Terms & Conditions | End User License Agreement | Privacy Policy</p>
-        <button class="back-to-top div5"><a href="#top" class="back">Back to Top</a></button>
+        <div class="div5">
+            <button class="back-to-top"><a href="#top" class="back">Back to Top</a></button>
+        </div>
     </footer>
 
     <!-- Allows java script to work on my page -->
