@@ -52,3 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+window.addEventListener("scroll", function() {
+    let scrollPos = window.scrollY;
+    document.querySelector(".parallax").style.backgroundPositionY = scrollPos * 0.5 + "px";
+});
